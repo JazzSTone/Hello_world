@@ -1,0 +1,21 @@
+/* 基礎單元格設定 */
+.ag-cell {
+    user-select: none !important; /* 拖拉時防止選取文字 */
+  }
+  
+  /* 範圍選取的背景色 */
+  .range-selected {
+    background-color: rgba(33, 150, 243, 0.15) !important;
+  }
+  
+  /* 範圍選取的外圍邊框 */
+  .range-selected-top { border-top: 1px solid #2196f3 !important; }
+  .range-selected-bottom { border-bottom: 1px solid #2196f3 !important; }
+  .range-selected-left { border-left: 1px solid #2196f3 !important; }
+  .range-selected-right { border-right: 1px solid #2196f3 !important; }
+  
+  /* 讓選中的格子邊框看起來更連續 */
+  .ag-cell.range-selected {
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+  }

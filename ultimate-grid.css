@@ -1,0 +1,39 @@
+/* 讓填充柄可以溢出單元格顯示 */
+.ag-cell {
+    overflow: visible !important;
+    user-select: none !important;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* 選取範圍背景 */
+  .range-selected {
+    background-color: rgba(33, 150, 243, 0.1) !important;
+  }
+  
+  /* 外圍粗邊框樣式 */
+  .range-top { border-top: 2px solid #2196f3 !important; }
+  .range-bottom { border-bottom: 2px solid #2196f3 !important; }
+  .range-left { border-left: 2px solid #2196f3 !important; }
+  .range-right { border-right: 2px solid #2196f3 !important; }
+  
+  /* 右下角填充柄 */
+  .range-handle::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #2196f3;
+    right: -5px;
+    bottom: -5px;
+    cursor: crosshair;
+    z-index: 1000;
+    border: 1px solid white;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  }
+  
+  /* 讓格線在選取時不要干擾視覺 */
+  .ag-cell.range-selected {
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+  }
